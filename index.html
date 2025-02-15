@@ -8,22 +8,23 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
             width: 100%;
-            overflow: hidden;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
             display: flex;
             justify-content: center;
-            align-items: center;
             background-color: black;
         }
-        embed {
-            width: 100vw;
-            height: 100vh;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <embed src="menu.pdf" type="application/pdf">
+    <img src="menu.pdf" alt="Menú de la pizzería">
 </body>
 </html>
 
