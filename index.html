@@ -9,16 +9,21 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
-        }
-        iframe {
             width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        embed {
+            width: 100vw;
             height: 100vh;
-            border: none;
         }
     </style>
 </head>
 <body>
-    <iframe src="menu.pdf"></iframe>
+    <embed src="menu.pdf" type="application/pdf">
 </body>
 </html>
+
