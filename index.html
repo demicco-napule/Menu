@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú - Napul</title>
+    <title>Selecciona un idioma</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: black;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
+            text-align: center;
+            background-color: white;
         }
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .button {
+            padding: 20px 40px;
+            font-size: 24px;
+            color: white;
+            background-color: #d62828;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            width: 250px;
+            text-align: center;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #a61e1e;
         }
     </style>
 </head>
 <body>
-    <img src="menu-1.png" alt="Menú parte 1">
-    <img src="menu-2.png" alt="Menú parte 2">
+
+    <a href="menu-italiano.html" class="button">Italiano 🇮🇹</a>
+    <a href="#" class="button">English 🇬🇧</a>
+
 </body>
 </html>
+
