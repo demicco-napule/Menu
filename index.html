@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona un idioma</title>
-    <!-- Incluir la fuente Lobster desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -14,66 +12,76 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
-            background-color: #fff6db; /* Fondo cálido y suave */
             background-image: url('bg-menu.jpg');
             background-size: cover;
             background-position: center;
         }
         .button {
-            padding: 15px 30px; /* Aumentar el tamaño del botón */
-            font-size: 24px; /* Tamaño de la fuente mayor para móviles */
-            color: #3b2f2f; /* Tono oscuro para el texto */
-            background-color: #f4e1c1; /* Beige suave para el fondo del botón */
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
             border: none;
-            border-radius: 15px; /* Bordes más redondeados */
+            border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
-            width: auto; /* Dejar que el botón se ajuste al tamaño del texto */
+            width: auto;
             text-align: center;
-            margin: 15px;
-            font-family: 'Lobster', cursive; /* Fuente Lobster para el estilo cursivo */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para darle profundidad */
-            transition: transform 0.3s ease; /* Transición para hacer el botón más interactivo */
+            margin: 10px;
+            transition: all 0.3s ease;
         }
-        .button:active {
-            transform: scale(0.98); /* Efecto de pulsación cuando el usuario toca el botón */
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .bottom-buttons {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         .instagram-button {
-            font-size: 0; /* Sin texto, solo logo */
-            background-color: #E4405F; /* Color de fondo de Instagram */
-            width: 60px; /* Hacer el botón un poco más grande */
-            height: 60px; /* Hacer el botón un poco más grande */
-            margin-top: 30px;
-            border-radius: 50%; /* Hacer el botón redondeado */
-            text-decoration: none;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #E4405F;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: transform 0.3s ease; /* Transición para que el botón sea interactivo */
+            margin-top: 10px;
         }
-        .instagram-button:active {
-            transform: scale(0.95); /* Efecto de pulsación para el botón de Instagram */
+        .instagram-button:hover {
+            background-color: #d8345f;
         }
-        .instagram-button img {
-            width: 35px; /* Ajustar tamaño del logo */
-            height: 35px; /* Ajustar tamaño del logo */
+        .instagram-button i {
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
 
-    <a href="menu-italiano.html" class="button">Italiano 🇮🇹</a>
-    <a href="#" class="button">English 🇬🇧</a>
-    
-    <!-- Botón de Instagram con el logo -->
-    <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" target="_blank" class="instagram-button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-    </a>
+    <div style="margin-top: 100px;">
+        <a href="menu-italiano.html" class="button">Italiano 🇮🇹</a>
+        <a href="#" class="button">English 🇬🇧</a>
+    </div>
+
+    <div class="bottom-buttons">
+        <a href="https://www.google.com/search?sca_esv=248c1a1232d6ce85&sxsrf=AHTn8zoWrHD6HnZnMHfb1AFIQwMCxAaz2g:1741540179120&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVfedn1-UnnPEt9EOTWc9fFsVaCiTnVOynVi4SG2ZIJwnZgRdkFckNGFE7ibFAwN9zYSZSPzavQgbwaZJr34hCzIciqTV6FaaqJpC9wt6i-zTA74HznKGRNOfeI_qTRCDxCfr1Q%3D&q=Napul%27%C3%A9+-+Pizzeria+Napoletana+Opiniones&sa=X&ved=2ahUKEwiThfTdvv2LAxVhILkGHcmMAN8Q0bkNegQIRhAE&biw=1536&bih=695&dpr=1.25#"
+           class="button" target="_blank">Aiutaci a migliorare, lasciaci una recensione!</a>
+
+        <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" class="instagram-button" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
 
 </body>
 </html>
