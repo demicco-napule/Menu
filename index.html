@@ -26,6 +26,7 @@
             position: relative;
             display: inline-block;
             margin-top: 20vh; /* Establece la posición del botón desde la mitad */
+            text-align: center; /* Asegura que los idiomas estén centrados */
         }
         /* Estilo del botón principal de idiomas */
         .language-button {
@@ -55,6 +56,10 @@
             border-radius: 10px;
             z-index: 1;
             margin-top: 5px;
+            max-height: 200px; /* Solo 4 idiomas visibles */
+            overflow-y: scroll; /* Habilita el scroll para los idiomas restantes */
+            width: 100%; /* Hace que ocupe todo el ancho disponible */
+            text-align: center; /* Centra los elementos */
         }
         .dropdown-content a {
             color: white;
