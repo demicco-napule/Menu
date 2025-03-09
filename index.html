@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona un idioma</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Añadimos Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome para iconos -->
     <style>
         body, html {
             margin: 0;
@@ -24,7 +24,7 @@
         .language-dropdown {
             position: relative;
             display: inline-block;
-            margin-top: 20vh;
+            margin-top: 35vh; /* Ajusta para que esté un poco más arriba del centro */
             text-align: center;
         }
         .language-button {
@@ -73,20 +73,27 @@
             display: block;
         }
 
-        /* Estilo para los botones de Instagram y la reseña */
+        .arrow-down {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        /* Botones de Instagram y la reseña */
         .social-buttons {
-            margin-top: 30px;
+            margin-top: auto; /* Esto asegura que los botones estén al fondo */
             text-align: center;
+            width: 100%;
         }
         .social-button {
-            display: inline-block;
-            padding: 10px 15px;
+            display: block;
+            padding: 12px;
             font-size: 18px;
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
             border-radius: 10px;
             text-decoration: none;
-            margin: 10px;
+            margin: 10px auto;
+            width: 200px;
             transition: background-color 0.3s ease;
         }
         .social-button:hover {
@@ -94,20 +101,21 @@
         }
         .instagram-button {
             font-size: 20px;
-            padding: 12px;
         }
         .review-button {
             font-size: 16px;
-            padding: 12px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Botón de idioma con animación de banderas -->
+    <!-- Botón de idioma con texto y flecha hacia abajo -->
     <div class="language-dropdown">
         <button class="language-button">
-            Scegli la tua lingua / Choose your language
+            Scegli la tua lingua
+            <br> <!-- Salto de línea entre los textos -->
+            Choose your language
+            <i class="fas fa-arrow-down arrow-down"></i> <!-- Flecha hacia abajo -->
         </button>
         <div class="dropdown-content">
             <a href="menu-italiano.html">IT 🇮🇹</a>
@@ -125,7 +133,7 @@
     <!-- Botones de Instagram y Reseña -->
     <div class="social-buttons">
         <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" class="social-button instagram-button">
-            <i class="fab fa-instagram"></i>
+            <i class="fab fa-instagram"></i> Instagram
         </a>
         <a href="https://www.google.com/search?sca_esv=248c1a1232d6ce85&sxsrf=AHTn8zoWrHD6HnZnMHfb1AFIQwMCxAaz2g:1741540179120&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVfedn1-UnnPEt9EOTWc9fFsVaCiTnVOynVi4SG2ZIJwnZgRdkFckNGFE7ibFAwN9zYSZSPzavQgbwaZJr34hCzIciqTV6FaaqJpC9wt6i-zTA74HznKGRNOfeI_qTRCDxCfr1Q%3D&q=Napul%27%C3%A9+-+Pizzeria+Napoletana+Opiniones&sa=X&ved=2ahUKEwiThfTdvv2LAxVhILkGHcmMAN8Q0bkNegQIRhAE&biw=1536&bih=695&dpr=1.25#"
            class="social-button review-button">
