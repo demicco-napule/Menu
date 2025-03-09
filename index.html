@@ -13,7 +13,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Los botones ahora estarán en el principio de la página */
             align-items: center;
             text-align: center;
             background-image: url('bg-menu.jpg');
@@ -73,8 +73,9 @@
         .language-buttons {
             margin-top: 40px; /* Espacio arriba de los botones de idioma */
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column; /* Esto hace que los botones se alineen verticalmente */
             justify-content: center;
+            align-items: center;
         }
         .language-button {
             padding: 10px 20px;
@@ -85,7 +86,7 @@
             border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
-            margin: 5px;
+            margin: 5px 0; /* Margen entre los botones */
             display: flex;
             align-items: center;
         }
@@ -127,3 +128,4 @@
 
 </body>
 </html>
+
