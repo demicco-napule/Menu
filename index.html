@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona un idioma</title>
-    <!-- Incluir la fuente Dancing Script desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!-- Incluir una fuente más sencilla como Arial -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -26,7 +26,7 @@
             padding: 20px 40px;
             font-size: 24px;
             color: white;
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo gris semi-transparente */
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para los botones */
             border: none;
             border-radius: 10px;
             cursor: pointer;
@@ -35,7 +35,38 @@
             width: 250px;
             text-align: center;
             margin: 10px;
-            font-family: 'Dancing Script', cursive; /* Usar la fuente Dancing Script */
+            font-family: 'Arial', sans-serif; /* Usar una fuente más sencilla */
             z-index: 1; /* Asegurarse de que el texto esté por encima del fondo */
         }
         .button:hover {
+            background-color: rgba(0, 0, 0, 1); /* Un tono más oscuro al pasar el ratón */
+        }
+        .instagram-button {
+            font-size: 16px;
+            background-color: #E4405F; /* Color de fondo de Instagram */
+            padding: 10px 20px;
+            width: 200px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif; /* Usar una fuente más sencilla */
+        }
+        .instagram-button:hover {
+            background-color: #C13584; /* Color al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+
+    <a href="menu-italiano.html" class="button">Italiano 🇮🇹</a>
+    <a href="#" class="button">English 🇬🇧</a>
+    
+    <!-- Botón de Instagram -->
+    <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" target="_blank" class="instagram-button">
+        Instagram 📸
+    </a>
+
+</body>
+</html>
