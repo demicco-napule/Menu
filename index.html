@@ -44,27 +44,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* Efecto de banderas cambiando rápidamente */
-        .flag-text {
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-            animation: flagChange 3s linear infinite;
-            display: inline-block;
-        }
-
-        /* Animación de banderas cambiando rápidamente */
-        @keyframes flagChange {
-            0% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_Italy.svg/320px-Flag_of_Italy.svg.png'); } /* Bandera Italia */
-            14% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_Italy.svg/320px-Flag_of_Italy.svg.png'); }
-            28% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png'); } /* Bandera ENG */
-            42% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png'); }
-            57% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png'); } /* Bandera ESP */
-            71% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png'); }
-            85% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png'); } /* Bandera DE */
-            100% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png'); }
-        }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -94,6 +73,33 @@
             display: block;
         }
 
+        /* Estilo para los botones de Instagram y la reseña */
+        .social-buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .social-button {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .social-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .instagram-button {
+            font-size: 20px;
+            padding: 12px;
+        }
+        .review-button {
+            font-size: 16px;
+            padding: 12px;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +107,7 @@
     <!-- Botón de idioma con animación de banderas -->
     <div class="language-dropdown">
         <button class="language-button">
-            <span class="flag-text">Selecciona tu idioma</span>
+            Scegli la tua lingua / Choose your language
         </button>
         <div class="dropdown-content">
             <a href="menu-italiano.html">IT 🇮🇹</a>
@@ -114,6 +120,17 @@
             <a href="menu-ukrainian.html">UA 🇺🇦</a>
             <a href="menu-russian.html">RU 🇷🇺</a>
         </div>
+    </div>
+
+    <!-- Botones de Instagram y Reseña -->
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" class="social-button instagram-button">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.google.com/search?sca_esv=248c1a1232d6ce85&sxsrf=AHTn8zoWrHD6HnZnMHfb1AFIQwMCxAaz2g:1741540179120&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVfedn1-UnnPEt9EOTWc9fFsVaCiTnVOynVi4SG2ZIJwnZgRdkFckNGFE7ibFAwN9zYSZSPzavQgbwaZJr34hCzIciqTV6FaaqJpC9wt6i-zTA74HznKGRNOfeI_qTRCDxCfr1Q%3D&q=Napul%27%C3%A9+-+Pizzeria+Napoletana+Opiniones&sa=X&ved=2ahUKEwiThfTdvv2LAxVhILkGHcmMAN8Q0bkNegQIRhAE&biw=1536&bih=695&dpr=1.25#"
+           class="social-button review-button">
+            Lascia una recensione ⭐
+        </a>
     </div>
 
 </body>
