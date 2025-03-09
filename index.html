@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona un idioma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Añadimos Font Awesome para los iconos -->
     <style>
         body, html {
             margin: 0;
@@ -12,7 +13,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             text-align: center;
             background-image: url('bg-menu.jpg');
@@ -63,13 +64,19 @@
             background-color: #d8345f;
         }
         .instagram-button i {
-            font-size: 24px;
+            font-size: 24px; /* Asegúrate de que el icono se vea correctamente */
+        }
+        .button-container {
+            margin-top: 150px; /* Desplazar más los botones de idioma */
+            display: flex;
+            flex-direction: column; /* Alinear los botones de idioma verticalmente */
+            align-items: center;
         }
     </style>
 </head>
 <body>
 
-    <div style="margin-top: 100px;">
+    <div class="button-container">
         <a href="menu-italiano.html" class="button">Italiano 🇮🇹</a>
         <a href="#" class="button">English 🇬🇧</a>
     </div>
