@@ -90,20 +90,22 @@
             font-size: 18px;
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
-            border-radius: 10px;
+            border-radius: 50%; /* Hace que los botones sean redondos */
             text-decoration: none;
             margin: 10px auto;
-            width: 200px;
+            width: 60px;
+            height: 60px;
             transition: background-color 0.3s ease;
+            line-height: 60px; /* Centra el icono */
         }
         .social-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
         .instagram-button {
-            font-size: 20px;
+            font-size: 30px;
         }
         .review-button {
-            font-size: 16px;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -133,13 +135,13 @@
     <!-- Botones de Instagram y Reseña -->
     <div class="social-buttons">
         <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" class="social-button instagram-button">
-            <i class="fab fa-instagram"></i> Instagram
+            <i class="fab fa-instagram"></i> <!-- Solo el logo de Instagram -->
         </a>
-        <a href="https://www.google.com/search?sca_esv=248c1a1232d6ce85&sxsrf=AHTn8zoWrHD6HnZnMHfb1AFIQwMCxAaz2g:1741540179120&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVfedn1-UnnPEt9EOTWc9fFsVaCiTnVOynVi4SG2ZIJwnZgRdkFckNGFE7ibFAwN9zYSZSPzavQgbwaZJr34hCzIciqTV6FaaqJpC9wt6i-zTA74HznKGRNOfeI_qTRCDxCfr1Q%3D&q=Napul%27%C3%A9+-+Pizzeria+Napoletana+Opiniones&sa=X&ved=2ahUKEwiThfTdvv2LAxVhILkGHcmMAN8Q0bkNegQIRhAE&biw=1536&bih=695&dpr=1.25#"
-           class="social-button review-button">
-            Lascia una recensione ⭐
+        <a href="https://www.google.com/search?sca_esv=248c1a1232d6ce85&sxsrf=AHTn8zoWrHD6HnZnMHfb1AFIQwMCxAaz2g:1741540179120&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVfedn1-UnnPEt9EOTWc9fFsVaCiTnVOynVi4SG2ZIJwnZgRdkFckNGFE7ibFAwN9zYSZSPzavQgbwaZJr34hCzIciqTV6FaaqJpC9wt6i-zTA74HznKGRNOfeI_qTRCDxCfr1Q%3D&q=Napul%27%C3%A9+-+Pizzeria+Napoletana+Opiniones&sa=X&ved=2ahUKEwiThfTdvv2LAxVhILkGHcmMAN8Q0bkNegQIRhAE&biw=1536&bih=695&dpr=1.25#" class="social-button review-button">
+            ⭐⭐⭐⭐⭐ <!-- 5 estrellas para la reseña -->
         </a>
     </div>
 
 </body>
 </html>
+
