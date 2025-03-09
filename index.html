@@ -21,7 +21,14 @@
             background-position: center;
             background-attachment: fixed;
         }
-        .button {
+        /* Estilo general del contenedor de botones */
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20vh; /* Establece la posición del botón desde la mitad */
+        }
+        /* Estilo del botón principal de idiomas */
+        .language-button {
             padding: 15px 30px;
             font-size: 20px;
             color: white;
@@ -29,16 +36,41 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            text-decoration: none;
             font-weight: bold;
             width: auto;
             text-align: center;
+            display: inline-block;
             margin: 10px;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
-        .button:hover {
+        .language-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+        /* Estilo del menú desplegable */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            min-width: 160px;
+            border-radius: 10px;
+            z-index: 1;
+            margin-top: 5px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: rgba(0, 0, 0, 1);
+        }
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Estilo de los botones de reseña e Instagram fijos */
         .bottom-buttons {
             position: fixed;
             bottom: 20px;
@@ -69,56 +101,41 @@
             background-color: rgba(0, 0, 0, 1);
         }
         .review-button i {
-            margin-right: 10px; /* Separación entre emoji y texto */
+            margin-right: 10px;
         }
-        .language-buttons {
-            margin-top: 50vh; /* Mueve los botones a partir de la mitad de la página */
-            display: flex;
-            flex-direction: column; /* Esto hace que los botones se alineen verticalmente */
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        .language-button {
-            padding: 15px 30px;
-            font-size: 16px;
+        .instagram-button {
+            padding: 10px;
+            background-color: #e4405f;
+            border-radius: 50%;
             color: white;
-            background-color: rgba(0, 0, 0, 0.6);
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            margin: 5px 0; /* Margen entre los botones */
-            display: flex;
-            align-items: center;
+            font-size: 30px;
             transition: background-color 0.3s ease;
         }
-        .language-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        .instagram-button:hover {
+            background-color: #c13584;
         }
     </style>
 </head>
 <body>
 
-    <div class="language-buttons">
-        <!-- Primero IT (Italiano) y ENG (Inglés) -->
-        <a href="menu-italiano.html" class="language-button">IT 🇮🇹</a>
-        <a href="menu-english.html" class="language-button">ENG 🇬🇧</a>
-
-        <!-- Luego ESP (Español) -->
-        <a href="menu-espanyol.html" class="language-button">ESP 🇪🇸</a>
-
-        <!-- El resto de los idiomas -->
-        <a href="menu-deutsch.html" class="language-button">DE 🇩🇪</a>
-        <a href="menu-francais.html" class="language-button">FR 🇫🇷</a>
-        <a href="menu-portugues.html" class="language-button">PT 🇵🇹</a>
-        <a href="menu-polski.html" class="language-button">PL 🇵🇱</a>
-        <a href="menu-ukrainian.html" class="language-button">UA 🇺🇦</a>
-        <a href="menu-russian.html" class="language-button">RU 🇷🇺</a>
+    <!-- Botón desplegable para los idiomas -->
+    <div class="language-dropdown">
+        <button class="language-button">Selecciona el idioma</button>
+        <div class="dropdown-content">
+            <a href="menu-italiano.html">IT 🇮🇹</a>
+            <a href="menu-english.html">ENG 🇬🇧</a>
+            <a href="menu-espanyol.html">ESP 🇪🇸</a>
+            <a href="menu-deutsch.html">DE 🇩🇪</a>
+            <a href="menu-francais.html">FR 🇫🇷</a>
+            <a href="menu-portugues.html">PT 🇵🇹</a>
+            <a href="menu-polski.html">PL 🇵🇱</a>
+            <a href="menu-ukrainian.html">UA 🇺🇦</a>
+            <a href="menu-russian.html">RU 🇷🇺</a>
+        </div>
     </div>
 
     <div class="bottom-buttons">
-        <!-- Botón de Instagram primero -->
+        <!-- Botón de Instagram -->
         <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" class="instagram-button" target="_blank">
             <i class="fab fa-instagram"></i>
         </a>
