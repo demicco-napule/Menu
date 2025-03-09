@@ -15,20 +15,18 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            background-color: #fff6db; /* Fondo con el color hexadecimal que proporcionaste */
+            background-color: #fff6db;
             background-image: url('bg-menu.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        /* Estilo general del contenedor de botones */
         .language-dropdown {
             position: relative;
             display: inline-block;
-            margin-top: 20vh; /* Establece la posición del botón desde la mitad */
-            text-align: center; /* Asegura que los idiomas estén centrados */
+            margin-top: 20vh;
+            text-align: center;
         }
-        /* Estilo del botón principal de idiomas */
         .language-button {
             padding: 15px 30px;
             font-size: 20px;
@@ -38,8 +36,6 @@
             border-radius: 10px;
             cursor: pointer;
             font-weight: bold;
-            width: auto;
-            text-align: center;
             display: inline-block;
             margin: 10px;
             transition: background-color 0.3s ease;
@@ -47,7 +43,28 @@
         .language-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        /* Estilo del menú desplegable */
+
+        /* Efecto de banderas cambiando rápidamente */
+        .flag-text {
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            animation: flagChange 3s linear infinite;
+            display: inline-block;
+        }
+
+        /* Animación de banderas cambiando rápidamente */
+        @keyframes flagChange {
+            0% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_Italy.svg/320px-Flag_of_Italy.svg.png'); } /* Bandera Italia */
+            14% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_Italy.svg/320px-Flag_of_Italy.svg.png'); }
+            28% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png'); } /* Bandera ENG */
+            42% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png'); }
+            57% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png'); } /* Bandera ESP */
+            71% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png'); }
+            85% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png'); } /* Bandera DE */
+            100% { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png'); }
+        }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -56,76 +73,36 @@
             border-radius: 10px;
             z-index: 1;
             margin-top: 5px;
-            max-height: 200px; /* Solo 4 idiomas visibles */
-            overflow-y: scroll; /* Habilita el scroll para los idiomas restantes */
-            width: 100%; /* Hace que ocupe todo el ancho disponible */
-            text-align: center; /* Centra los elementos */
+            max-height: 250px;
+            overflow-y: scroll;
+            width: 100%;
         }
+
         .dropdown-content a {
             color: white;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: left;
         }
+
         .dropdown-content a:hover {
             background-color: rgba(0, 0, 0, 1);
         }
+
         .language-dropdown:hover .dropdown-content {
             display: block;
         }
-        /* Estilo de los botones de reseña e Instagram fijos */
-        .bottom-buttons {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 1000;
-        }
-        .review-button {
-            padding: 15px 30px;
-            font-size: 20px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
-            width: auto;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .review-button:hover {
-            background-color: rgba(0, 0, 0, 1);
-        }
-        .review-button i {
-            margin-right: 10px;
-        }
-        .instagram-button {
-            padding: 10px;
-            background-color: #e4405f;
-            border-radius: 50%;
-            color: white;
-            font-size: 30px;
-            transition: background-color 0.3s ease;
-        }
-        .instagram-button:hover {
-            background-color: #c13584;
-        }
+
     </style>
 </head>
 <body>
 
-    <!-- Botón desplegable para los idiomas -->
+    <!-- Botón de idioma con animación de banderas -->
     <div class="language-dropdown">
-        <button class="language-button">Selecciona el idioma</button>
+        <button class="language-button">
+            <span class="flag-text">Selecciona tu idioma</span>
+        </button>
         <div class="dropdown-content">
             <a href="menu-italiano.html">IT 🇮🇹</a>
             <a href="menu-english.html">ENG 🇬🇧</a>
@@ -137,18 +114,6 @@
             <a href="menu-ukrainian.html">UA 🇺🇦</a>
             <a href="menu-russian.html">RU 🇷🇺</a>
         </div>
-    </div>
-
-    <div class="bottom-buttons">
-        <!-- Botón de Instagram -->
-        <a href="https://www.instagram.com/napule_ca?igsh=dDNwenZ2ejR5dnV3" class="instagram-button" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <!-- Botón de reseña con emoji de 5 estrellas y frase en italiano -->
-        <a href="https://www.google.com/search?sca_esv=248c1a1232d6ce85&sxsrf=AHTn8zoWrHD6HnZnMHfb1AFIQwMCxAaz2g:1741540179120&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVfedn1-UnnPEt9EOTWc9fFsVaCiTnVOynVi4SG2ZIJwnZgRdkFckNGFE7ibFAwN9zYSZSPzavQgbwaZJr34hCzIciqTV6FaaqJpC9wt6i-zTA74HznKGRNOfeI_qTRCDxCfr1Q%3D&q=Napul%27%C3%A9+-+Pizzeria+Napoletana+Opiniones&sa=X&ved=2ahUKEwiThfTdvv2LAxVhILkGHcmMAN8Q0bkNegQIRhAE&biw=1536&bih=695&dpr=1.25#"
-           class="review-button" target="_blank">
-            ⭐ Lasciaci una recensione!
-        </a>
     </div>
 
 </body>
